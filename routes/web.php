@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ModalidadeController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -21,10 +22,18 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/modalidades', [ModalidadeController::class, 'index'])->name('modalidades.index');
+
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/dashboard', function () {
         return Inertia::render('Admin/Dashboard');
     })->middleware(['auth', 'verified'])->name('dashboard');
+
+    Route::get('/modalidades', [ModalidadeController::class, 'indexAdmin'])->middleware(['auth'])->name('modalidades');
+
+    Route::get('/modalidades/create', [ModalidadeController::class, 'create'])->middleware(['auth'])->name('modalidades.create');
+
+    Route::post('/modalidades', [ModalidadeController::class, 'store'])->middleware(['auth'])->name('modalidades.store');
 });
 
 require __DIR__ . '/auth.php';
