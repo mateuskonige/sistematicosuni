@@ -43,6 +43,10 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
     Route::post('/modalidades', [ModalidadeController::class, 'store'])->middleware(['auth'])->name('modalidades.store');
 
+    Route::get('/modalidades/{id}/edit', [ModalidadeController::class, 'edit'])->middleware(['auth'])->name('modalidades.edit');
+
+    Route::put('/modalidades/{id}', [ModalidadeController::class, 'update'])->middleware(['auth'])->name('modalidades.update');
+
     Route::delete('/modalidades/{id}', [ModalidadeController::class, 'destroy'])->middleware(['auth'])->name('modalidades.destroy');
 });
 

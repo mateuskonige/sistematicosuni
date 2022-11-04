@@ -52,11 +52,13 @@ function destroy(id) {
                             <td class="py-4 px-6">
                                 {{ modalidade.responsavel }}
                             </td>
-                            <td class="py-4 px-6">
-                                Editar
+                            <td class="py-4 px-6 space-x-5">
+                                <Link
+                                    class="py-2 px-4 bg-teal-600 hover:bg-teal-500 rounded hover:shadow text-white uppercase font-bold text-[10px] tracking-widest"
+                                    :href="route('admin.modalidades.edit', modalidade.id)">Editar</Link>
 
                                 <button
-                                    class="py-2 px-4 bg-red-500 rounded shadow text-white uppercase font-bold text-[10px] tracking-widest"
+                                    class="py-2 px-4 bg-red-600 hover:bg-red-500 rounded hover:shadow text-white uppercase font-bold text-[10px] tracking-widest"
                                     @click="destroy(modalidade.id)">Excluir</button>
                             </td>
                         </tr>

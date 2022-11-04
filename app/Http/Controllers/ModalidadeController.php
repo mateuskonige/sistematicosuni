@@ -53,16 +53,6 @@ class ModalidadeController extends Controller
         return redirect()->route('admin.modalidades');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
 
     /**
      * Show the form for editing the specified resource.
@@ -72,7 +62,9 @@ class ModalidadeController extends Controller
      */
     public function edit($id)
     {
-        //
+        $modalidade = Modalidade::findOrFail($id);
+
+        return Inertia::render('Admin/Modalidades/Edit', compact('modalidade'));
     }
 
     /**
@@ -84,7 +76,22 @@ class ModalidadeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $modalidade = Modalidade::findOrFail($id);
+
+        $validated = $request->validate([
+            'nome' => 'required|min:3|max:255',
+            'status' => 'required|boolean',
+            'dias' => 'required|min:3|max:255',
+            'endereco' => 'required|min:3|max:255',
+            'responsavel' => 'required|min:3|max:255',
+            'responsavelContato' => 'required|min:8|max:8',
+        ]);
+
+        $validated['responsavelContato'] = '55389' + $validated['responsavelContato'];
+
+        $modalidade->update($validated);
+
+        return redirect()->route('admin.modalidades');
     }
 
     /**

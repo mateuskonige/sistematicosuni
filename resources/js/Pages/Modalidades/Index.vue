@@ -34,17 +34,17 @@ defineProps(['modalidades'])
                                 :class="modalidade.status ? 'bg-green-500' : 'bg-red-500'"></span>
                             {{ modalidade.nome }}</button>
                         <div class="p-4 space-y-4">
-                            <h3 class="font-bold ">Dias</h3>
+                            <h3 class="font-bold ">Dia & Hora</h3>
                             <div>
                                 <p>{{ modalidade.dias }}</p>
                             </div>
-                            <h3 class="font-bold ">Endereço</h3>
+                            <h3 class="font-bold ">Local</h3>
                             <div>
                                 <p>{{ modalidade.endereco }}</p>
                             </div>
                             <h3 class="font-bold ">Responsável</h3>
                             <div>
-                                <p>{{ modalidade.responsavel }} - <a
+                                <p>{{ modalidade.responsavel }} - <a target="_blank"
                                         class="text-blue-600 hover:underline hover:text-blue-700"
                                         :href="`https://api.whatsapp.com/send?phone=55389${modalidade.responsavelContato}`">WhatsApp</a>
                                 </p>
