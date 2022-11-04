@@ -14,7 +14,7 @@
                         {{ title }}
                     </h1>
                     <p class="text-lg text-white">
-                        Conheça todas as áreas de atuação que você, aluno ou formado, pode participar.
+                        {{ body }}
                     </p>
                 </div>
             </div>
@@ -26,8 +26,7 @@
 import headerImg from "/public/images/calourada.jfif";
 
 export default {
-    props: ['title'],
-
+    props: ['title', 'body'],
 
     data() {
         return {

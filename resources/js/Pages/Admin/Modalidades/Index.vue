@@ -2,13 +2,19 @@
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import { Link } from '@inertiajs/inertia-vue3';
+import { Inertia } from "@inertiajs/inertia";
 
-defineProps(['modalidades']);
+defineProps(['modalidades'])
+
+function destroy(id) {
+    if (confirm("Are you sure you want to Delete")) {
+        Inertia.delete(route("admin.modalidades.destroy", id));
+    }
+}
 </script>
 
 <template>
     <AuthenticatedLayout>
-
         <div class="p-6 bg-white border-b border-gray-200 flex justify-around">
             <p class="font-bold text-lg">Modalidades</p>
             <Link :href="route('admin.modalidades.create')">
@@ -49,16 +55,16 @@ defineProps(['modalidades']);
                             <td class="py-4 px-6">
                                 Editar
 
-                                Excluir
+                                <button
+                                    class="py-2 px-4 bg-red-500 rounded shadow text-white uppercase font-bold text-[10px] tracking-widest"
+                                    @click="destroy(modalidade.id)">Excluir</button>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
-
-
-
-
     </AuthenticatedLayout>
 </template>
+
+

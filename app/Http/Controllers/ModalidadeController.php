@@ -95,6 +95,10 @@ class ModalidadeController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $modalidade = Modalidade::find($id);
+
+        $modalidade->delete();
+
+        return redirect()->route('admin.modalidades');
     }
 }

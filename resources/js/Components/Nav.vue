@@ -16,7 +16,7 @@
                 </div>
                 <ul class="hidden md:flex space-x-12">
                     <li>
-                        <Link class="text-white font-bold hover:text-blue-900 text-lg" href="/">Home</Link>
+                        <Link class="text-white font-bold hover:text-blue-900 text-lg" href="/sobre">Sobre</Link>
                     </li>
                     <li class="">
                         <Link class="text-white font-bold hover:text-blue-900 text-lg" href="/modalidades">Modalidades
@@ -29,7 +29,8 @@
                         <a href="#" class="text-white font-bold hover:text-blue-900 text-lg">Área dos Calouros</a>
                     </li>
                     <li class="">
-                        <a href="#" class="text-white font-bold hover:text-blue-900 text-lg">Contato</a>
+                        <Link class="text-white font-bold hover:text-blue-900 text-lg" href="/contato">Contato
+                        </Link>
                     </li>
                 </ul>
                 <div class="block md:hidden">

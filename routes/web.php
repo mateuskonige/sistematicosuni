@@ -22,6 +22,14 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/sobre', function () {
+    return Inertia::render('Sobre/Index');
+});
+
+Route::get('/contato', function () {
+    return Inertia::render('Contato/Index');
+});
+
 Route::get('/modalidades', [ModalidadeController::class, 'index'])->name('modalidades.index');
 
 Route::prefix('admin')->name('admin.')->group(function () {
@@ -34,6 +42,8 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/modalidades/create', [ModalidadeController::class, 'create'])->middleware(['auth'])->name('modalidades.create');
 
     Route::post('/modalidades', [ModalidadeController::class, 'store'])->middleware(['auth'])->name('modalidades.store');
+
+    Route::delete('/modalidades/{id}', [ModalidadeController::class, 'destroy'])->middleware(['auth'])->name('modalidades.destroy');
 });
 
 require __DIR__ . '/auth.php';
