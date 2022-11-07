@@ -38,7 +38,7 @@ class ModalidadeController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'nome' => 'required|min:3|max:255',
+            'nome' => 'required|min:3|max:32',
             'status' => 'required|boolean',
             'dias' => 'required|min:3|max:255',
             'endereco' => 'required|min:3|max:255',
@@ -79,7 +79,7 @@ class ModalidadeController extends Controller
         $modalidade = Modalidade::findOrFail($id);
 
         $validated = $request->validate([
-            'nome' => 'required|min:3|max:255',
+            'nome' => 'required|min:3|max:32',
             'status' => 'required|boolean',
             'dias' => 'required|min:3|max:255',
             'endereco' => 'required|min:3|max:255',
