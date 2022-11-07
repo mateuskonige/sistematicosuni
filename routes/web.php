@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\CampeonatoController;
+use App\Http\Controllers\ConquistaController;
 use App\Http\Controllers\ModalidadeController;
+use App\Http\Controllers\SobreController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -22,9 +25,7 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/sobre', function () {
-    return Inertia::render('Sobre/Index');
-});
+Route::get('/sobre', [SobreController::class, 'index'])->name('sobre.index');
 
 Route::get('/contato', function () {
     return Inertia::render('Contato/Index');
@@ -48,6 +49,10 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::put('/modalidades/{id}', [ModalidadeController::class, 'update'])->middleware(['auth'])->name('modalidades.update');
 
     Route::delete('/modalidades/{id}', [ModalidadeController::class, 'destroy'])->middleware(['auth'])->name('modalidades.destroy');
+
+    Route::resource('campeonatos', CampeonatoController::class);
+
+    Route::resource('conquistas', ConquistaController::class);
 });
 
 require __DIR__ . '/auth.php';

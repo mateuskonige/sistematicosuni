@@ -4,6 +4,8 @@ import Nav from "@/Components/Nav.vue";
 import HeaderMini from "@/Components/HeaderMini.vue";
 import Footer from "@/Components/Footer.vue";
 import modalidadesImg from "/public/images/modalidades.jfif";
+
+defineProps(["campeonatos", "anos", "conquistas"]);
 </script>
 
 <template>
@@ -53,27 +55,53 @@ import modalidadesImg from "/public/images/modalidades.jfif";
         <h2 class="text-blue-900 text-2xl md:text-4xl font-bold mb-8">
           Conquistas
         </h2>
-        <div class="grid grid-cols-5 gap-8">
-          <div class="">
+        <div
+          class="
+            grid grid-cols-1
+            sm:grid-cols-2
+            md:grid-cols-3
+            lg:grid-cols-4
+            gap-8
+          "
+        >
+          <div v-for="(ano, index) in anos" :key="index">
             <button
               class="
                 p-4
                 bg-blue-900
                 text-white
-                rounded
+                rounded-t
                 w-full
+                shadow
                 uppercase
                 font-bold
               "
             >
-              2022
+              {{ ano }}
             </button>
-            <details class="p-4 shadow rounded bg-white">
-              <summary class="font-bold py-2">UNICOPA</summary>
-              <ul>
-                <li>🥈 - Voleibol - M</li>
-              </ul>
-            </details>
+            <div v-for="campeonato in campeonatos" :key="campeonato.id">
+              <details
+                v-if="campeonato.ano == ano"
+                class="p-4 bg-white border-b border-gray-200 shadow"
+              >
+                <summary class="font-bold py-2">{{ campeonato.nome }}</summary>
+                <ul>
+                  <li
+                    v-for="conquista in campeonato.conquistas"
+                    :key="conquista.id"
+                  >
+                    {{
+                      conquista.colocacao == 1
+                        ? "🥇"
+                        : conquista.colocacao == 2
+                        ? "🥈"
+                        : "🥉"
+                    }}
+                    - {{ conquista.nome + " - " + conquista.modalidade }}
+                  </li>
+                </ul>
+              </details>
+            </div>
           </div>
         </div>
       </div>
