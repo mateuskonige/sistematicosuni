@@ -27,6 +27,10 @@ Route::get('/', function () {
 
 Route::get('/sobre', [SobreController::class, 'index'])->name('sobre.index');
 
+Route::get('/midia', function () {
+    return Inertia::render('Midia/Index');
+});
+
 Route::get('/contato', function () {
     return Inertia::render('Contato/Index');
 });

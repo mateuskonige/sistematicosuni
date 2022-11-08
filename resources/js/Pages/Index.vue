@@ -1,27 +1,25 @@
 
 
 <template>
-  <Head title="Início" />
 
-  <Nav />
+    <Head title="Início" />
 
-  <Header />
+    <Nav />
 
-  <div class="bg-white">
-    <div class="max-w-screen-xl mx-auto">
-      <section id="sobre">
-        <div class="grid grid-cols-2 gap-12 px-4 py-16">
-          <div class="bg-white">
-            <span class="text-amber-600 text-lg">Sobre</span>
-            <h1 class="text-5xl text-blue-900 font-bold mb-8">Quem somos</h1>
-            <p class="text-xl text-blue-900 mb-8">
-              Acreditamos no poder de transformação do esporte e na sua
-              importância para uma vida saudável. Aqui, todos são bem-vindos!
-            </p>
-            <Link
-              type="button"
-              href="/sobre"
-              class="
+    <Header />
+
+    <div class="bg-white">
+        <div class="max-w-screen-xl mx-auto">
+            <section id="sobre">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 px-4 py-16">
+                    <div class="bg-white">
+                        <span class="text-amber-600 text-lg">Sobre</span>
+                        <h1 class="text-5xl text-blue-900 font-bold mb-8">Quem somos</h1>
+                        <p class="text-xl text-blue-900 mb-8">
+                            Acreditamos no poder de transformação do esporte e na sua
+                            importância para uma vida saudável. Aqui, todos são bem-vindos!
+                        </p>
+                        <Link type="button" href="/sobre" class="
                 px-6
                 py-3
                 bg-blue-800
@@ -32,13 +30,8 @@
                 font-bold
                 text-amber-100 text-lg
                 mr-6
-              "
-              >Saiba mais!</Link
-            >
-            <a
-              type="button"
-              href="#"
-              class="
+              ">Saiba mais!</Link>
+                        <a type="button" href="#" class="
                 px-6
                 py-3
                 rounded
@@ -48,45 +41,32 @@
                 ease-out
                 font-bold
                 text-blue-900 text-lg
-              "
-              >Nossas conquistas</a
-            >
-          </div>
-          <div>
-            <img
-              class="aspect-video object-cover rounded shadow-lg"
-              :src="headerImg"
-              alt=""
-            />
-          </div>
+              ">Nossas conquistas</a>
+                    </div>
+                    <div>
+                        <img class="aspect-video object-cover rounded shadow-lg" :src="headerImg" alt="" />
+                    </div>
+                </div>
+            </section>
         </div>
-      </section>
     </div>
-  </div>
-  <div class="bg-gray-100">
-    <div class="max-w-screen-xl mx-auto">
-      <section id="modalidades">
-        <div class="grid grid-cols-2 gap-12 px-4 py-16">
-          <div>
-            <img
-              class="object-cover rounded shadow-lg"
-              :src="modalidadesImg"
-              alt=""
-            />
-          </div>
-          <div>
-            <span class="text-amber-600 text-lg">Modalidades</span>
-            <h1 class="text-5xl text-blue-900 font-bold mb-8">
-              Fomentando o esporte
-            </h1>
-            <p class="text-xl text-blue-900 mb-8">
-              Acreditamos no poder de transformação do esporte e na sua
-              importância para uma vida saudável. Aqui, todos são bem-vindos!
-            </p>
-            <a
-              type="button"
-              href="#"
-              class="
+    <div class="bg-gray-100">
+        <div class="max-w-screen-xl mx-auto">
+            <section id="modalidades">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 px-4 py-16">
+                    <div>
+                        <img class="object-cover rounded shadow-lg" :src="modalidadesImg" alt="" />
+                    </div>
+                    <div>
+                        <span class="text-amber-600 text-lg">Modalidades</span>
+                        <h1 class="text-5xl text-blue-900 font-bold mb-8">
+                            Fomentando o esporte
+                        </h1>
+                        <p class="text-xl text-blue-900 mb-8">
+                            Acreditamos no poder de transformação do esporte e na sua
+                            importância para uma vida saudável. Aqui, todos são bem-vindos!
+                        </p>
+                        <a type="button" href="#" class="
                 px-6
                 py-3
                 bg-blue-900
@@ -94,44 +74,34 @@
                 font-bold
                 text-amber-300 text-lg
                 mr-6
-              "
-              >Saiba mais!</a
-            >
-            <a
-              type="button"
-              href="#"
-              class="
+              ">Saiba mais!</a>
+                        <a type="button" href="#" class="
                 px-6
                 py-3
                 rounded
                 border border-blue-900
                 font-bold
                 text-blue-900 text-lg
-              "
-              >Nossas conquistas</a
-            >
-          </div>
+              ">Nossas conquistas</a>
+                    </div>
+                </div>
+            </section>
         </div>
-      </section>
     </div>
-  </div>
-  <div class="bg-white">
-    <div class="max-w-screen-xl mx-auto">
-      <section id="sobre">
-        <div class="grid grid-cols-2 gap-12 px-4 py-16">
-          <div>
-            <span class="text-amber-600 text-lg">Modalidades</span>
-            <h1 class="text-5xl text-blue-900 font-bold mb-8">
-              Fomentando o esporte
-            </h1>
-            <p class="text-xl text-blue-900 mb-8">
-              Acreditamos no poder de transformação do esporte e na sua
-              importância para uma vida saudável. Aqui, todos são bem-vindos!
-            </p>
-            <a
-              type="button"
-              href="#"
-              class="
+    <div class="bg-white">
+        <div class="max-w-screen-xl mx-auto">
+            <section id="sobre">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 px-4 py-16 items-center">
+                    <div>
+                        <span class="text-amber-600 text-lg">Mídia</span>
+                        <h1 class="text-5xl text-blue-900 font-bold mb-8">
+                            Melhor conteúdo universitário
+                        </h1>
+                        <p class="text-xl text-blue-900 mb-8">
+                            Acreditamos no poder de transformação do esporte e na sua
+                            importância para uma vida saudável. Aqui, todos são bem-vindos!
+                        </p>
+                        <a type="button" href="#" class="
                 px-6
                 py-3
                 bg-blue-900
@@ -139,36 +109,44 @@
                 font-bold
                 text-amber-300 text-lg
                 mr-6
-              "
-              >Saiba mais!</a
-            >
-            <a
-              type="button"
-              href="#"
-              class="
+              ">Saiba mais!</a>
+                        <a type="button" href="#" class="
                 px-6
                 py-3
                 rounded
                 border border-blue-900
                 font-bold
                 text-blue-900 text-lg
-              "
-              >Nossas conquistas</a
-            >
-          </div>
-          <div>
-            <span class="text-amber-600 text-lg">Modalidades</span>
-            <h1 class="text-5xl text-blue-900 font-bold mb-8">
-              Fomentando o esporte
-            </h1>
-            <p class="text-xl text-blue-900 mb-8">
-              Acreditamos no poder de transformação do esporte e na sua
-              importância para uma vida saudável. Aqui, todos são bem-vindos!
-            </p>
-            <a
-              type="button"
-              href="#"
-              class="
+              ">Nossas conquistas</a>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <p class="font-bold text-3xl text-blue-900 mb-2">Fotos</p>
+                            <p class="text-blue-900">Suas fotos estão aqui! Não esqueça de nos marcar.</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-3xl text-blue-900 mb-2">Músicas</p>
+                            <p class="text-blue-900">Os maiores sucessos da calourada.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="bg-gray-100">
+        <div class="max-w-screen-xl mx-auto">
+            <section id="sobre">
+                <div class="grid grid-cols-1 px-4 py-16">
+                    <div>
+                        <span class="text-amber-600 text-lg">Modalidades</span>
+                        <h1 class="text-5xl text-blue-900 font-bold mb-8">
+                            Fomentando o esporte
+                        </h1>
+                        <p class="text-xl text-blue-900 mb-8">
+                            Acreditamos no poder de transformação do esporte e na sua
+                            importância para uma vida saudável. Aqui, todos são bem-vindos!
+                        </p>
+                        <a type="button" href="#" class="
                 px-6
                 py-3
                 bg-blue-900
@@ -176,74 +154,22 @@
                 font-bold
                 text-amber-300 text-lg
                 mr-6
-              "
-              >Saiba mais!</a
-            >
-            <a
-              type="button"
-              href="#"
-              class="
+              ">Saiba mais!</a>
+                        <a type="button" href="#" class="
                 px-6
                 py-3
                 rounded
                 border border-blue-900
                 font-bold
                 text-blue-900 text-lg
-              "
-              >Nossas conquistas</a
-            >
-          </div>
+              ">Nossas conquistas</a>
+                    </div>
+                </div>
+            </section>
         </div>
-      </section>
     </div>
-  </div>
-  <div class="bg-gray-100">
-    <div class="max-w-screen-xl mx-auto">
-      <section id="sobre">
-        <div class="grid grid-cols-1 px-4 py-16">
-          <div>
-            <span class="text-amber-600 text-lg">Modalidades</span>
-            <h1 class="text-5xl text-blue-900 font-bold mb-8">
-              Fomentando o esporte
-            </h1>
-            <p class="text-xl text-blue-900 mb-8">
-              Acreditamos no poder de transformação do esporte e na sua
-              importância para uma vida saudável. Aqui, todos são bem-vindos!
-            </p>
-            <a
-              type="button"
-              href="#"
-              class="
-                px-6
-                py-3
-                bg-blue-900
-                rounded
-                font-bold
-                text-amber-300 text-lg
-                mr-6
-              "
-              >Saiba mais!</a
-            >
-            <a
-              type="button"
-              href="#"
-              class="
-                px-6
-                py-3
-                rounded
-                border border-blue-900
-                font-bold
-                text-blue-900 text-lg
-              "
-              >Nossas conquistas</a
-            >
-          </div>
-        </div>
-      </section>
-    </div>
-  </div>
 
-  <Footer />
+    <Footer />
 </template>
 
 <script >
@@ -254,17 +180,17 @@ import Header from "@/Components/Header.vue";
 import Footer from "@/Components/Footer.vue";
 
 export default {
-  components: {
-    Head,
-    Nav,
-    Header,
-    Footer,
-  },
+    components: {
+        Head,
+        Nav,
+        Header,
+        Footer,
+    },
 
-  data() {
-    return {
-      modalidadesImg: modalidadesImg,
-    };
-  },
+    data() {
+        return {
+            modalidadesImg: modalidadesImg,
+        };
+    },
 };
 </script>

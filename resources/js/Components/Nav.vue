@@ -1,6 +1,6 @@
 <template>
     <div class="bg-amber-500">
-        <div class="max-w-screen-xl mx-auto">
+        <div class="max-w-screen-xl mx-auto relative">
             <nav class="
           flex
           items-center
@@ -23,7 +23,7 @@
                         </Link>
                     </li>
                     <li class="">
-                        <a href="#" class="text-white font-bold hover:text-blue-900 text-lg">Mídia</a>
+                        <Link href="/midia" class="text-white font-bold hover:text-blue-900 text-lg">Mídia</Link>
                     </li>
                     <li class="">
                         <a href="#" class="text-white font-bold hover:text-blue-900 text-lg">Área dos Calouros</a>
@@ -34,7 +34,7 @@
                     </li>
                 </ul>
                 <div class="block md:hidden">
-                    <span type="button" class="
+                    <span type="button" @click="toggleMenu = !toggleMenu" class="
               p-3
               rounded-full
               bg-amber-600
@@ -61,6 +61,40 @@
                 </div>
             </nav>
         </div>
+        <div v-if="toggleMenu" class="absolute left-0 right-0 md:hidden z-10 shadow-2xl">
+            <div class="bg-amber-500 w-full">
+                <ul v-auto-animate class="w-full">
+                    <li>
+                        <Link type="button"
+                            class="text-white font-bold hover:text-blue-900 text-lg border-b border-amber-600 p-6 w-full focus:bg-amber-600"
+                            href="/sobre">Sobre</Link>
+                    </li>
+                    <li>
+                        <Link type="button"
+                            class="text-white font-bold hover:text-blue-900 text-lg border-b border-amber-600 p-6 w-full focus:bg-amber-600"
+                            href="/modalidades">Modalidades
+                        </Link>
+                    </li>
+                    <li>
+                        <Link type="button" href="/midia"
+                            class="text-white font-bold hover:text-blue-900 text-lg border-b border-amber-600 p-6 w-full focus:bg-amber-600">
+                        Mídia</Link>
+                    </li>
+                    <li>
+                        <Link type="button" href="#"
+                            class="text-white font-bold hover:text-blue-900 text-lg border-b border-amber-600 p-6 w-full focus:bg-amber-600">
+                        Área
+                        dos Calouros</Link>
+                    </li>
+                    <li>
+                        <Link type="button"
+                            class="text-white font-bold hover:text-blue-900 text-lg border-b border-amber-600 p-6 w-full focus:bg-amber-600"
+                            href="/contato">Contato
+                        </Link>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -76,6 +110,7 @@ export default {
     data() {
         return {
             logo: logo,
+            toggleMenu: false,
         };
     },
 };

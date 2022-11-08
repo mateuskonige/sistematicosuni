@@ -29,7 +29,8 @@ defineProps(['modalidades'])
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8" v-auto-animate>
 
                     <div class="w-full shadow rounded bg-white" v-for="(modalidade, index) in modalidades" :key="index">
-                        <button class="p-4 bg-blue-900 text-white rounded w-full uppercase font-bold"><span
+                        <button
+                            class="p-4 bg-blue-900 text-white rounded w-full uppercase font-bold cursor-default"><span
                                 class="rounded-full px-3 mr-4"
                                 :class="modalidade.status ? 'bg-green-500' : 'bg-red-500'"></span>
                             {{ modalidade.nome }}</button>
