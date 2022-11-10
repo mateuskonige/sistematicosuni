@@ -16,15 +16,11 @@
 </template>
 
 <script>
-import headerImg from "/public/images/calourada.jfif";
-
 export default {
   props: ["title", "body"],
 
   data() {
-    return {
-      headerImg: headerImg,
-    };
+    return {};
   },
 };
 </script>

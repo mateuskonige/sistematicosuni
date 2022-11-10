@@ -40,7 +40,7 @@
         </div>
         <div>
           <img
-            class="aspect-video object-none rounded shadow-lg"
+            class="aspect-video object-fit rounded shadow-lg"
             :src="headerImg"
             alt=""
           />
@@ -51,7 +51,7 @@
 </template>
 
 <script>
-import headerImg from "/public/images/calourada.jfif";
+import headerImg from "/public/images/esporte.jpg";
 import { Link } from "@inertiajs/inertia-vue3";
 
 export default {
