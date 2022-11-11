@@ -4,7 +4,7 @@ import PrimaryButton from "@/Components/PrimaryButton.vue";
 import InputError from "@/Components/InputError.vue";
 import { useForm } from "@inertiajs/inertia-vue3";
 
-const props = defineProps(["campeonatos"]);
+const props = defineProps(["campeonato"]);
 const campeonato = props.campeonato;
 
 const form = useForm({
