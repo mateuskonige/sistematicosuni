@@ -20,6 +20,7 @@
         "vue": "^3.2.41"
     },
     "dependencies": {
-        "@formkit/auto-animate": "^1.0.0-beta.3"
+        "@formkit/auto-animate": "^1.0.0-beta.3",
+        "vue-writer": "^1.2.0"
     }
 }

@@ -13,9 +13,10 @@
         "
       >
         <div class="">
-          <h1 class="text-5xl md:text-7xl text-white font-bold mb-8">
-            #GoCapi
-          </h1>
+          <VueWriter
+            class="text-5xl md:text-7xl text-white font-bold mb-8"
+            :array="['#GoCapi']"
+          />
           <p class="text-lg text-white mb-8">
             A. A. A. S. I. SISTEMÁTICOS - Associação Atlética Acadêmica de
             Sistemas de Informação. Investindo no esporte universitário desde
@@ -51,12 +52,14 @@
 </template>
 
 <script>
-import headerImg from "/public/images/esporte.jpg";
 import { Link } from "@inertiajs/inertia-vue3";
+import headerImg from "/public/images/esporte.jpg";
+import VueWriter from "vue-writer";
 
 export default {
   components: {
     Link,
+    VueWriter,
   },
   data() {
     return {

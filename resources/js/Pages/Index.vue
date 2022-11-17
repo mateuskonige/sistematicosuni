@@ -80,9 +80,19 @@
               Fomentando o esporte
             </h1>
             <p class="text-xl text-blue-900 mb-8">
-              Acreditamos no poder de transformação do esporte e na sua
-              importância para uma vida saudável. Aqui, todos são bem-vindos!
+              Mais do que um grupo formado para fomentar o esporte, as Atléticas
+              são sinônimo de interação, diversão e solidariedade.
             </p>
+            <ul class="list-inside text-xl text-blue-900 space-y-4 mb-8">
+              <li>
+                <span class="px-3 rounded-full bg-amber-500 mr-4"> </span>
+                Treinos gratuitos
+              </li>
+              <li>
+                <span class="px-3 rounded-full bg-amber-500 mr-4"> </span>
+                Integração social
+              </li>
+            </ul>
             <a
               type="button"
               href="#"
@@ -117,7 +127,7 @@
   </div>
   <div class="bg-white">
     <div class="max-w-screen-xl mx-auto">
-      <section id="sobre">
+      <section id="midia">
         <div
           class="grid grid-cols-1 md:grid-cols-2 gap-12 px-4 py-16 items-center"
         >
@@ -176,17 +186,19 @@
   </div>
   <div class="bg-gray-100">
     <div class="max-w-screen-xl mx-auto">
-      <section id="sobre">
-        <div class="grid grid-cols-1 px-4 py-16">
+      <section id="ingressos">
+        <div class="grid grid-cols-1 md:grid-cols-2 items-center px-4 py-16">
           <div>
-            <span class="text-amber-600 text-lg">Modalidades</span>
+            <span class="text-amber-600 text-lg">Loja e Ingressos</span>
             <h1 class="text-5xl text-blue-900 font-bold mb-8">
-              Fomentando o esporte
+              Vista as nossas cores
             </h1>
             <p class="text-xl text-blue-900 mb-8">
-              Acreditamos no poder de transformação do esporte e na sua
-              importância para uma vida saudável. Aqui, todos são bem-vindos!
+              Renove seu guarda-roupa de azul, branco e amarelo e bora curtir
+              com a Sistematicos!
             </p>
+          </div>
+          <div class="flex md:flex-row md:justify-end space-x-4">
             <a
               type="button"
               href="#"
@@ -197,9 +209,8 @@
                 rounded
                 font-bold
                 text-amber-300 text-lg
-                mr-6
               "
-              >Saiba mais!</a
+              >Ingressos!</a
             >
             <a
               type="button"
@@ -212,7 +223,7 @@
                 font-bold
                 text-blue-900 text-lg
               "
-              >Nossas conquistas</a
+              >Seja sócio</a
             >
           </div>
         </div>
