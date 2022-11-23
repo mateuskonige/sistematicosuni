@@ -20,13 +20,13 @@ import Footer from "@/Components/Footer.vue";
         <h2 class="text-blue-900 text-2xl md:text-4xl font-bold mb-8">
           Sinta essa experiência
         </h2>
-        <p class="md:text-lg text-blue-900 mb-8">
+        <p class="md:text-lg text-blue-900">
           Se prepare para o vermelho e branco dominar a sua tela.
         </p>
       </div>
 
       <div class="py-12 px-4 pb-8">
-        <div class="grid grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div class="bg-white rounded shadow p-8 space-y-8">
             <h6 class="text-2xl text-blue-900 font-bold">Fotos</h6>
             <p class="md:text-lg text-blue-900 mb-8">
@@ -82,7 +82,7 @@ import Footer from "@/Components/Footer.vue";
   <div class="bg-white">
     <div class="max-w-screen-xl mx-auto">
       <div class="py-12 px-4 pb-8">
-        <div class="grid grid-cols-2 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <h2 class="text-blue-900 text-2xl md:text-4xl font-bold mb-8">
               Entre no ritmo da Capivara
