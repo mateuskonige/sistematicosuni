@@ -323,7 +323,7 @@
       "resources/js/app.js"
     ],
     "css": [
-      "assets/HeaderMini.0fd2080e.css"
+      "assets/HeaderMini.d0bbfad8.css"
     ]
   },
   "resources/js/Pages/Index.vue": {
@@ -337,7 +337,7 @@
       "__plugin-vue_export-helper.cdc0426e.js"
     ],
     "css": [
-      "assets/Index.0fd2080e.css"
+      "assets/Index.d0bbfad8.css"
     ],
     "assets": [
       "assets/copo.d56d907c.jpg",
@@ -388,12 +388,12 @@
     "file": "assets/app.c6276f19.css",
     "src": "resources/js/app.css"
   },
-  "resources/js/Pages/Index.css": {
-    "file": "assets/Index.0fd2080e.css",
-    "src": "resources/js/Pages/Index.css"
-  },
   "HeaderMini.css": {
-    "file": "assets/HeaderMini.0fd2080e.css",
+    "file": "assets/HeaderMini.d0bbfad8.css",
     "src": "HeaderMini.css"
+  },
+  "resources/js/Pages/Index.css": {
+    "file": "assets/Index.d0bbfad8.css",
+    "src": "resources/js/Pages/Index.css"
   }
 }
