@@ -35,6 +35,10 @@ Route::get('/contato', function () {
     return Inertia::render('Contato/Index');
 });
 
+Route::get('/calouros', function () {
+    return Inertia::render('Calouros/Index');
+});
+
 Route::get('/modalidades', [ModalidadeController::class, 'index'])->name('modalidades.index');
 
 Route::prefix('admin')->name('admin.')->group(function () {

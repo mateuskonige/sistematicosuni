@@ -26,7 +26,7 @@
             <Link href="/midia" class="text-white font-bold hover:text-blue-900 text-lg">Mídia</Link>
           </li>
           <li class="">
-            <a href="#" class="text-white font-bold hover:text-blue-900 text-lg">Área dos Calouros</a>
+            <Link href="/calouros" class="text-white font-bold hover:text-blue-900 text-lg">Área dos calouros</Link>
           </li>
           <li class="">
             <Link class="text-white font-bold hover:text-blue-900 text-lg" href="/contato">Contato
@@ -57,7 +57,7 @@
               hidden
               xl:inline-flex
             ">Ingressos</a>
-          <a type="button" href="#" class="
+          <button @click="alerta" class="
             px-6
                 py-3
                 bg-blue-800
@@ -70,7 +70,7 @@
                 mr-6 mb-4 md:mb-0
                 border-2 border-amber-500
                 hover:ring-2 ring-blue-800
-            ">Seja sócio</a>
+            ">Seja sócio</button>
         </div>
       </nav>
     </div>
@@ -116,7 +116,7 @@
             Mídia</Link>
           </li>
           <li>
-            <Link type="button" href="#" class="
+            <Link type="button" href="/calouros" class="
                 text-white
                 font-bold
                 hover:text-blue-900
@@ -162,5 +162,11 @@ export default {
       toggleMenu: false,
     };
   },
+
+  methods: {
+    alerta() {
+      alert('Disponível em breve!')
+    }
+  }
 };
 </script>

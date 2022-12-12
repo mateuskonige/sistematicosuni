@@ -36,9 +36,7 @@ defineProps(['modalidades'])
                         <p class="md:text-lg text-blue-900 mb-8">Nossa sala fica localizada no segundo andar do prédio
                             3,
                             entre a
-                            biblioteca e a secretaria geral, no campus sede da UNIMONTES.
-
-                            .</p>
+                            biblioteca e a secretaria geral, no campus sede da UNIMONTES.</p>
                         <a class="text-blue-600 hover:text-blue-700 font-bold hover:underline mb-8" target="_blank"
                             href="https://maps.google.com/maps/dir//Universidade+Estadual+de+Montes+Claros+-+Unimontes+Campus+Universit%C3%A1rio+Prof.+Darcy+Ribeiro+Av.+Prof.+Rui+Braga,+s%2Fn+-+Vila+Mauriceia+Montes+Claros+-+MG,+39401-089/@-16.7186987,-43.8785728,17z/data=!4m5!4m4!1m0!1m2!1m1!1s0x754ab5bc36990c9:0xa809bd14bd946505">Av.
                             Prof.

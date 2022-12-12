@@ -25,7 +25,7 @@ defineProps(["campeonatos", "anos", "conquistas"]);
                 </h2>
                 <div class="
             grid grid-cols-1
-            md:grid-cols-5 md:gap-8
+            lg:grid-cols-5 md:gap-8
             space-y-8
             md:space-y-0
           ">

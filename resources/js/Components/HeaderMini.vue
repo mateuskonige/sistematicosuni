@@ -1,7 +1,7 @@
 <template>
   <section id="header" class="bg-amber-500 bg-img">
     <div class="max-w-screen-xl mx-auto">
-      <div class="grid grid-cols-1 gap-8 md:gap-12 px-4 py-8 md:py-16">
+      <div class="grid grid-cols-1 gap-8 md:gap-12 px-4 py-8 md:px-8 md:py-16">
         <div class="">
           <h1 class="text-4xl md:text-7xl text-white font-bold mb-8">
             {{ title }}
