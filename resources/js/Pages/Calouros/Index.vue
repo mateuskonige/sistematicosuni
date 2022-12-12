@@ -21,6 +21,17 @@ import modalidadesImg from "/public/images/modalidades.jfif";
                 <h2 class="text-blue-900 text-2xl md:text-4xl font-bold mb-8">
                     Encontre as informações sobre seu curso!
                 </h2>
+                <p class=" text-blue-900 mb-8 col-span-3">A recepção dos calouros no curso de Sistemas de
+                    Informação acontece durante as primeiras semanas de
+                    aula, onde diversas atividades são realizadas para a integração entre os novos universitários e os
+                    alunos veteranos.
+                    <br><br>
+                    Entre as atividades realizadas para recepção de calouros, estão os trotes, campanhas solidárias,
+                    encontros entre turmas, palestras entre outros!
+                    <br><br>
+                    A recepção varia a cada ano, a depender da organização e da turma responsável, mas uma coisa podemos
+                    garantir: não faltará empolgação, então não fique de fora!
+                </p>
                 <div class="
             grid grid-cols-1
             lg:grid-cols-5 md:gap-8
