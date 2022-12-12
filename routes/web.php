@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CampeonatoController;
 use App\Http\Controllers\ConquistaController;
+use App\Http\Controllers\LinkController;
 use App\Http\Controllers\ModalidadeController;
 use App\Http\Controllers\SobreController;
 use Illuminate\Foundation\Application;
@@ -22,13 +23,16 @@ use Inertia\Inertia;
 Route::get('/', function () {
     return Inertia::render('Index', [
         'canLogin' => Route::has('login'),
+        'links' => App\Models\Link::first(),
     ]);
 });
 
 Route::get('/sobre', [SobreController::class, 'index'])->name('sobre.index');
 
 Route::get('/midia', function () {
-    return Inertia::render('Midia/Index');
+    return Inertia::render('Midia/Index', [
+        'links' => App\Models\Link::first(),
+    ]);
 });
 
 Route::get('/contato', function () {
@@ -61,6 +65,8 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::resource('campeonatos', CampeonatoController::class);
 
     Route::resource('conquistas', ConquistaController::class);
+
+    Route::resource('links', LinkController::class)->only(['index', 'update']);
 });
 
 require __DIR__ . '/auth.php';

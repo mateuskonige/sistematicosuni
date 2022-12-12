@@ -49,14 +49,7 @@
             </svg></span>
         </div>
         <div class="hidden lg:block space-x-6">
-          <a href="#" class="
-              text-white
-              font-bold
-              hover:text-blue-900
-              text-lg
-              hidden
-              xl:inline-flex
-            ">Ingressos</a>
+
           <button @click="alerta" class="
             px-6
                 py-3

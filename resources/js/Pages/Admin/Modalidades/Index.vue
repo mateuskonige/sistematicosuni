@@ -1,5 +1,6 @@
 <script setup>
 import PrimaryButton from '@/Components/PrimaryButton.vue';
+import NotificationBox from '@/Components/NotificationBox.vue';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import { Link } from '@inertiajs/inertia-vue3';
 import { Inertia } from "@inertiajs/inertia";
@@ -7,7 +8,7 @@ import { Inertia } from "@inertiajs/inertia";
 defineProps(['modalidades'])
 
 function destroy(id) {
-    if (confirm("Are you sure you want to Delete")) {
+    if (confirm("Tem certeza de que deseja excluir? ")) {
         Inertia.delete(route("admin.modalidades.destroy", id));
     }
 }
@@ -23,8 +24,9 @@ function destroy(id) {
         </div>
 
         <div class="max-w-5xl mx-auto mt-8">
-            <div class="bg-white rounded shadow p-4">
-                <table class="w-full text-sm text-left text-gray-500">
+            <NotificationBox />
+            <div class="bg-white rounded shadow p-4 overflow-x-auto">
+                <table class="w-full text-sm text-left text-gray-500 ">
                     <thead class="text-xs text-gray-700 uppercase bg-gray-50">
                         <tr>
                             <th scope="col" class="py-3 px-6">
@@ -36,7 +38,7 @@ function destroy(id) {
                             <th scope="col" class="py-3 px-6">
                                 Responsável
                             </th>
-                            <th scope="col" class="py-3 px-6">
+                            <th scope="col" class="py-3 px-6 float-right">
                                 Ações
                             </th>
                         </tr>
@@ -52,7 +54,7 @@ function destroy(id) {
                             <td class="py-4 px-6">
                                 {{ modalidade.responsavel }}
                             </td>
-                            <td class="py-4 px-6 space-x-5">
+                            <td class="py-4 px-6 inline-flex space-x-4 float-right">
                                 <Link
                                     class="py-2 px-4 bg-teal-600 hover:bg-teal-500 rounded hover:shadow text-white uppercase font-bold text-[10px] tracking-widest"
                                     :href="route('admin.modalidades.edit', modalidade.id)">Editar</Link>

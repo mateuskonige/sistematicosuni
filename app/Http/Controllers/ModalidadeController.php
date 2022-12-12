@@ -45,12 +45,11 @@ class ModalidadeController extends Controller
             'responsavel' => 'required|min:3|max:255',
             'responsavelContato' => 'required|min:8|max:8',
         ]);
-
-        $validated['responsavelContato'] = '55389' + $validated['responsavelContato'];
+        $validated['responsavelContato'] = '55389' . (string) $validated['responsavelContato'];
 
         Modalidade::create($validated);
 
-        return redirect()->route('admin.modalidades');
+        return redirect()->route('admin.modalidades')->with('success', 'Modalidade cadastrada.');
     }
 
 
@@ -63,6 +62,7 @@ class ModalidadeController extends Controller
     public function edit($id)
     {
         $modalidade = Modalidade::findOrFail($id);
+        $modalidade->responsavelContato = substr($modalidade->responsavelContato, 5);
 
         return Inertia::render('Admin/Modalidades/Edit', compact('modalidade'));
     }
@@ -87,11 +87,11 @@ class ModalidadeController extends Controller
             'responsavelContato' => 'required|min:8|max:8',
         ]);
 
-        $validated['responsavelContato'] = '55389' + $validated['responsavelContato'];
+        $validated['responsavelContato'] = '55389' . (string) $validated['responsavelContato'];
 
         $modalidade->update($validated);
 
-        return redirect()->route('admin.modalidades');
+        return redirect()->route('admin.modalidades')->with('success', 'Modalidade atualizada.');
     }
 
     /**
@@ -106,6 +106,6 @@ class ModalidadeController extends Controller
 
         $modalidade->delete();
 
-        return redirect()->route('admin.modalidades');
+        return redirect()->route('admin.modalidades')->with('error', 'Modalidade excluída.');
     }
 }

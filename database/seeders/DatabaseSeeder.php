@@ -33,12 +33,14 @@ class DatabaseSeeder extends Seeder
             'dias' => 'Quinta-feira, 19h',
             'endereco' => 'Quadra 1, UNIMONTES',
             'responsavel' => 'Henrique Gabriel',
-            'responsavelContato' => '40028922',
+            'responsavelContato' => '5538988664847',
         ]);
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        \App\Models\Link::create([
+            'loja' => 'https://www.sympla.com.br/evento/computaria/',
+            'ingressos' => 'https://www.sympla.com.br/evento/computaria/',
+            'playlist' => 'https://open.spotify.com/embed/playlist/37i9dQZEVXbMXbN3EUUhlg?utm_source=generator',
+            'driveFotos' => 'https://www.drive.google.com/',
+        ]);
     }
 }

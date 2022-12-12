@@ -21,35 +21,26 @@ const showingNavigationDropdown = ref(false);
               <!-- Logo -->
               <div class="shrink-0 flex items-center">
                 <Link :href="route('admin.dashboard')">
-                  <ApplicationLogo class="block h-9 w-auto" />
+                <ApplicationLogo class="block h-9 w-auto" />
                 </Link>
               </div>
 
               <!-- Navigation Links -->
               <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                <NavLink
-                  :href="route('admin.dashboard')"
-                  :active="route().current('admin.dashboard')"
-                >
+                <NavLink :href="route('admin.dashboard')" :active="route().current('admin.dashboard')">
                   Dashboard
                 </NavLink>
-                <NavLink
-                  :href="route('admin.modalidades')"
-                  :active="route().current('admin.modalidades')"
-                >
+                <NavLink :href="route('admin.modalidades')" :active="route().current('admin.modalidades')">
                   Modalidades
                 </NavLink>
-                <NavLink
-                  :href="route('admin.conquistas.index')"
-                  :active="route().current('admin.conquistas.index')"
-                >
+                <NavLink :href="route('admin.conquistas.index')" :active="route().current('admin.conquistas.index')">
                   Conquistas
                 </NavLink>
-                <NavLink
-                  :href="route('admin.campeonatos.index')"
-                  :active="route().current('admin.campeonatos.index')"
-                >
+                <NavLink :href="route('admin.campeonatos.index')" :active="route().current('admin.campeonatos.index')">
                   Campeonatos
+                </NavLink>
+                <NavLink :href="route('admin.links.index')" :active="route().current('admin.links.index')">
+                  Links
                 </NavLink>
               </div>
             </div>
@@ -60,9 +51,7 @@ const showingNavigationDropdown = ref(false);
                 <Dropdown align="right" width="48">
                   <template #trigger>
                     <span class="inline-flex rounded-md">
-                      <button
-                        type="button"
-                        class="
+                      <button type="button" class="
                           inline-flex
                           items-center
                           px-3
@@ -79,32 +68,21 @@ const showingNavigationDropdown = ref(false);
                           transition
                           ease-in-out
                           duration-150
-                        "
-                      >
+                        ">
                         {{ $page.props.auth.user.name }}
 
-                        <svg
-                          class="ml-2 -mr-0.5 h-4 w-4"
-                          xmlns="https://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fill-rule="evenodd"
+                        <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                          fill="currentColor">
+                          <path fill-rule="evenodd"
                             d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                            clip-rule="evenodd"
-                          />
+                            clip-rule="evenodd" />
                         </svg>
                       </button>
                     </span>
                   </template>
 
                   <template #content>
-                    <DropdownLink
-                      :href="route('logout')"
-                      method="post"
-                      as="button"
-                    >
+                    <DropdownLink :href="route('logout')" method="post" as="button">
                       Log Out
                     </DropdownLink>
                   </template>
@@ -114,9 +92,7 @@ const showingNavigationDropdown = ref(false);
 
             <!-- Hamburger -->
             <div class="-mr-2 flex items-center sm:hidden">
-              <button
-                @click="showingNavigationDropdown = !showingNavigationDropdown"
-                class="
+              <button @click="showingNavigationDropdown = !showingNavigationDropdown" class="
                   inline-flex
                   items-center
                   justify-center
@@ -128,34 +104,16 @@ const showingNavigationDropdown = ref(false);
                   transition
                   duration-150
                   ease-in-out
-                "
-              >
-                <svg
-                  class="h-6 w-6"
-                  stroke="currentColor"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    :class="{
-                      hidden: showingNavigationDropdown,
-                      'inline-flex': !showingNavigationDropdown,
-                    }"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                  <path
-                    :class="{
-                      hidden: !showingNavigationDropdown,
-                      'inline-flex': showingNavigationDropdown,
-                    }"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
+                ">
+                <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                  <path :class="{
+                    hidden: showingNavigationDropdown,
+                    'inline-flex': !showingNavigationDropdown,
+                  }" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                  <path :class="{
+                    hidden: !showingNavigationDropdown,
+                    'inline-flex': showingNavigationDropdown,
+                  }" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
             </div>
@@ -163,19 +121,27 @@ const showingNavigationDropdown = ref(false);
         </div>
 
         <!-- Responsive Navigation Menu -->
-        <div
-          :class="{
-            block: showingNavigationDropdown,
-            hidden: !showingNavigationDropdown,
-          }"
-          class="sm:hidden"
-        >
+        <div :class="{
+          block: showingNavigationDropdown,
+          hidden: !showingNavigationDropdown,
+        }" class="sm:hidden">
           <div class="pt-2 pb-3 space-y-1">
-            <ResponsiveNavLink
-              :href="route('admin.dashboard')"
-              :active="route().current('dashboard')"
-            >
+            <ResponsiveNavLink :href="route('admin.dashboard')" :active="route().current('admin.dashboard')">
               Dashboard
+            </ResponsiveNavLink>
+            <ResponsiveNavLink :href="route('admin.modalidades')" :active="route().current('admin.modalidades')">
+              Modalidades
+            </ResponsiveNavLink>
+            <ResponsiveNavLink :href="route('admin.conquistas.index')"
+              :active="route().current('admin.conquistas.index')">
+              Conquistas
+            </ResponsiveNavLink>
+            <ResponsiveNavLink :href="route('admin.campeonatos.index')"
+              :active="route().current('admin.campeonatos.index')">
+              Campeonatos
+            </ResponsiveNavLink>
+            <ResponsiveNavLink :href="route('admin.links.index')" :active="route().current('admin.links.index')">
+              Links
             </ResponsiveNavLink>
           </div>
 
@@ -191,11 +157,7 @@ const showingNavigationDropdown = ref(false);
             </div>
 
             <div class="mt-3 space-y-1">
-              <ResponsiveNavLink
-                :href="route('logout')"
-                method="post"
-                as="button"
-              >
+              <ResponsiveNavLink :href="route('logout')" method="post" as="button">
                 Log Out
               </ResponsiveNavLink>
             </div>

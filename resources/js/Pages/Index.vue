@@ -45,7 +45,8 @@
               ">Nossas conquistas</Link>
                     </div>
                     <div>
-                        <img class="aspect-video object-cover rounded shadow-lg" :src="copoImg" alt="" />
+                        <img class="aspect-video object-cover rounded shadow-lg hover:scale-105 transition-all ease-out hover:brightness-110"
+                            :src="copoImg" alt="" />
                     </div>
                 </div>
             </section>
@@ -56,7 +57,8 @@
             <section id="modalidades">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 px-4 md:px-8 py-16">
                     <div>
-                        <img class="object-cover rounded shadow-lg" :src="modalidadesImg" alt="" />
+                        <img class="object-cover rounded shadow-lg hover:scale-105 transition-all ease-out hover:brightness-110"
+                            :src="modalidadesImg" alt="" />
                     </div>
                     <div>
                         <span class="text-amber-600 text-lg">Modalidades</span>
@@ -157,7 +159,7 @@
                     <div>
 
 
-                        <Link type="button" href="/sobre" class="
+                        <Link type="button" :href="links.loja" class="
                 px-6
                 py-3
                 bg-blue-800
@@ -170,7 +172,17 @@
                 mr-6 mb-4 md:mb-0
                 border-2 border-white
                 hover:ring-2 ring-blue-800
-              ">Comprar!</Link>
+              ">Roupas e acessórios</Link>
+                        <a type="button" :href="links.ingressos" class="
+                px-4
+                py-2
+                rounded-xl
+                border border-blue-900
+                hover:bg-blue-700 hover:text-white hover:border-blue-700
+                transition-all
+                ease-out
+                text-blue-900 text-lg
+              ">Ingressos</a>
                     </div>
                 </div>
 
@@ -189,7 +201,10 @@ import Nav from "@/Components/Nav.vue";
 import Header from "@/Components/Header.vue";
 import Footer from "@/Components/Footer.vue";
 
+
+
 export default {
+    props: ['links'],
     components: {
         Head,
         Link,

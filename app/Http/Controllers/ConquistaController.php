@@ -53,7 +53,7 @@ class ConquistaController extends Controller
 
         Conquista::create($validated);
 
-        return redirect()->route('admin.conquistas.index');
+        return redirect()->route('admin.conquistas.index')->with('success', 'Conquista cadastrada.');
     }
 
 
@@ -94,7 +94,7 @@ class ConquistaController extends Controller
 
         $conquista->update($validated);
 
-        return redirect()->route('admin.conquistas.index');
+        return redirect()->route('admin.conquistas.index')->with('success', 'Conquista atualizada.');
     }
 
     /**
@@ -109,6 +109,6 @@ class ConquistaController extends Controller
 
         $conquista->delete();
 
-        return redirect()->route('admin.conquistas.index');
+        return redirect()->route('admin.conquistas.index')->with('error', 'Conquista excluída.');
     }
 }

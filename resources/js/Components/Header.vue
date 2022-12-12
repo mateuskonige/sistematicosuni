@@ -33,7 +33,8 @@
             ">Conheça mais!</Link>
                 </div>
                 <div>
-                    <img class="aspect-video object-fit rounded shadow-lg" :src="headerImg" alt="" />
+                    <img class="aspect-video object-fit rounded shadow-lg hover:scale-105 transition-all ease-out hover:brightness-110"
+                        :src="headerImg" alt="" />
                 </div>
             </div>
         </div>

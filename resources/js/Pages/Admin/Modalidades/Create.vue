@@ -67,9 +67,14 @@ const submit = () => {
                     <div class="mb-6">
                         <label for="responsavelContato" class="block mb-2 text-sm font-medium text-gray-900 ">Whatsapp
                             (Responsável)</label>
-                        <input v-model="form.responsavelContato" type="text" id="responsavelContato"
-                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                            placeholder="ex.: 5538988887777" required>
+                        <div class="grid grid-cols-6 gap-4">
+                            <input type="text"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 col-span-1"
+                                disabled value="55389">
+                            <input v-model="form.responsavelContato" type="text" id="responsavelContato"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 col-span-5"
+                                placeholder="ex.: 5538988887777" required>
+                        </div>
                         <InputError class="mt-2" :message="form.errors.responsavelContato" />
                     </div>
 

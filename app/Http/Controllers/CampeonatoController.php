@@ -47,7 +47,7 @@ class CampeonatoController extends Controller
 
         Campeonato::create($validated);
 
-        return redirect()->route('admin.campeonatos.index');
+        return redirect()->route('admin.campeonatos.index')->with('success', 'Campeonato cadastrado.');
     }
 
 
@@ -83,7 +83,7 @@ class CampeonatoController extends Controller
         $campeonato = Campeonato::findOrFail($id);
         $campeonato->update($validated);
 
-        return redirect()->route('admin.campeonatos.index');
+        return redirect()->route('admin.campeonatos.index')->with('success', 'Campeonato atualizado.');
     }
 
     /**
@@ -97,6 +97,6 @@ class CampeonatoController extends Controller
         $campeonato = Campeonato::findOrFail($id);
         $campeonato->delete();
 
-        return redirect()->route('admin.campeonatos.index');
+        return redirect()->route('admin.campeonatos.index')->with('error', 'Campeonato excluído.');
     }
 }
