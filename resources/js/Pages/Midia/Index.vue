@@ -4,45 +4,43 @@ import Nav from "@/Components/Nav.vue";
 import HeaderMini from "@/Components/HeaderMini.vue";
 import Footer from "@/Components/Footer.vue";
 
-defineProps(['links'])
+defineProps(["links"]);
 </script>
 
 <template>
-
   <Head title="Mídia" />
 
   <Nav />
 
-  <HeaderMini title="Mídia" body="Explore todo conteúdo preparado para você e fique de boa como uma capivara." />
+  <HeaderMini
+    title="Mídia"
+    body="Explore todo conteúdo preparado para você e fique de boa como uma capivara."
+  />
 
   <div class="bg-white">
     <div class="max-w-screen-xl mx-auto">
       <div class="py-12 px-4 pb-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="grid grid-cols-1 gap-8">
           <div>
             <h2 class="text-blue-900 text-2xl md:text-4xl font-bold mb-8">
               Entre no ritmo da Capivara
             </h2>
-            <p class="md:text-lg text-blue-900 mb-8">
+            <p class="md:text-lg text-blue-900">
               Acompanhe os maiores sucessos da torcida Sistematicos e se prepare
               para dar um show na arquibancada e na calourada.
             </p>
-            <a type="button" href="/sobre" class="
-                px-6
-                py-3
-                bg-blue-900
-                hover:bg-blue-800 hover:text-white hover:shadow-lg
-                transition-all
-                ease-out
-                rounded
-                font-bold
-                text-gray-100 text-lg
-              ">Conheça mais!</a>
           </div>
           <div style="left: 0; width: 100%; height: 380px; position: relative">
-            <iframe class="rounded shadow" :src="links.playlist" width="100%" height="380" frameBorder="0"
-              allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"></iframe>
+            <iframe
+              class="rounded shadow"
+              :src="links.playlist"
+              width="100%"
+              height="380"
+              frameBorder="0"
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
           </div>
         </div>
       </div>
@@ -68,17 +66,30 @@ defineProps(['links'])
               tranquilo, aqui é tudo liberado.
             </p>
 
-            <a type="button" href="/sobre" class="
+            <a
+              type="button"
+              :href="links.driveFotos"
+              class="
                 px-6
                 py-3
-                bg-blue-900
-                hover:bg-blue-800 hover:text-white hover:shadow-lg
+                bg-blue-800
+                hover:bg-blue-700 hover:text-white
                 transition-all
                 ease-out
-                rounded
+                rounded-xl
                 font-bold
-                text-gray-100 text-lg
-              ">Conheça mais!</a>
+                text-gray-50
+                hover:text-white
+                text-lg
+                mr-6
+                mb-4
+                md:mb-0
+                border-2 border-white
+                hover:ring-2
+                ring-blue-800
+              "
+              >Acessar Drive!</a
+            >
           </div>
         </div>
       </div>

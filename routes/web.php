@@ -46,7 +46,7 @@ Route::get('/calouros', function () {
 Route::get('/modalidades', [ModalidadeController::class, 'index'])->name('modalidades.index');
 
 Route::prefix('admin')->name('admin.')->group(function () {
-    Route::get('/dashboard', function () {
+    Route::get('/', function () {
         return Inertia::render('Admin/Dashboard');
     })->middleware(['auth', 'verified'])->name('dashboard');
 
