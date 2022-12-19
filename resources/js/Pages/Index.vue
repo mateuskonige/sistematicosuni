@@ -4,6 +4,12 @@
 
     <Head title="Início" />
 
+    <div v-if="noticia.active" id="prenav" class="bg-red-500">
+        <div class="max-w-4xl mx-auto p-4 text-center">
+            <span class="text-white font-bold ">{{ noticia.description }}</span>
+        </div>
+    </div>
+
     <Nav />
 
     <Header />
@@ -201,10 +207,8 @@ import Nav from "@/Components/Nav.vue";
 import Header from "@/Components/Header.vue";
 import Footer from "@/Components/Footer.vue";
 
-
-
 export default {
-    props: ['links'],
+    props: ['links', 'noticia'],
     components: {
         Head,
         Link,

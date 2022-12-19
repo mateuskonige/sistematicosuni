@@ -44,6 +44,10 @@ class DatabaseSeeder extends Seeder
             'playlist' => 'https://open.spotify.com/embed/playlist/37i9dQZEVXbMXbN3EUUhlg?utm_source=generator',
             'driveFotos' => 'https://mega.nz/folder/AjARDSwQ#4jTp1rkJQEBf7tXn5RYyow/folder/4n4iRI7A',
         ]);
+        \App\Models\Noticia::create([
+            'description' => '',
+            'active' => false,
+        ]);
 
         \App\Models\User::create([
             'name' =>   'Enael Rocha',

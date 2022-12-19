@@ -4,6 +4,7 @@ use App\Http\Controllers\CampeonatoController;
 use App\Http\Controllers\ConquistaController;
 use App\Http\Controllers\LinkController;
 use App\Http\Controllers\ModalidadeController;
+use App\Http\Controllers\NoticiaController;
 use App\Http\Controllers\SobreController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -24,6 +25,7 @@ Route::get('/', function () {
     return Inertia::render('Index', [
         'canLogin' => Route::has('login'),
         'links' => App\Models\Link::first(),
+        'noticia' => App\Models\Noticia::first(),
     ]);
 });
 
@@ -67,6 +69,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::resource('conquistas', ConquistaController::class);
 
     Route::resource('links', LinkController::class)->only(['index', 'update']);
+    Route::resource('noticia', NoticiaController::class)->only(['index', 'update']);
 });
 
 require __DIR__ . '/auth.php';
