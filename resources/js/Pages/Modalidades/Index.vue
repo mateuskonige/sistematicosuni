@@ -34,16 +34,7 @@ defineProps(["modalidades"]);
             :key="index"
           >
             <button
-              class="
-                p-4
-                bg-blue-900
-                text-white
-                rounded
-                w-full
-                uppercase
-                font-bold
-                cursor-default
-              "
+              class="p-4 bg-blue-900 text-white rounded w-full uppercase font-bold cursor-default"
             >
               <span
                 class="rounded-full px-3 mr-4"
@@ -67,7 +58,7 @@ defineProps(["modalidades"]);
                   <a
                     target="_blank"
                     class="text-blue-600 hover:underline hover:text-blue-700"
-                    :href="`https://api.whatsapp.com/send?phone=55389${modalidade.responsavelContato}`"
+                    :href="`https://api.whatsapp.com/send?phone=${modalidade.responsavelContato}`"
                     >WhatsApp</a
                   >
                 </p>
